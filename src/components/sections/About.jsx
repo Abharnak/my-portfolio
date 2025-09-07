@@ -11,7 +11,8 @@ export const About = () => {
     
   ];
 
-  const backendSkills = ["Powerbi", "Excel", "Google colab","Figma", "Kicad", "Fusion360", "Arduino"];
+  const backendSkills = ["Powerbi", "Excel", "Git", "Whisper", "Google colab",
+                        "Figma", "Kicad", "Fusion360", "Arduino","TinkerCAD"];
 
   return (
     <section
@@ -70,11 +71,11 @@ I'm a motivated and detail-oriented Software Developer with strong skills in Pyt
               <h3 className="text-xl font-bold mb-4"> 🏫 Education </h3>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
                 <li>
-                  <strong> B.Tech. in Artificial Inelligence and Data SCience </strong> - Kumaraguru College of Technology
+                  <strong> B.Tech. in Artificial Inelligence and Data Science </strong> - Kumaraguru College of Technology
                   (2022-2024)
                 </li>
                 <li>
-                  Relevant Coursework: Data Structures, Machine Learning, Data Visualization
+                  <strong>Relevant Coursework:</strong> Data Structures, Operating System, Data Modelling, Machine Learning, Data Visualization, Computer Vision & Image Processing
                 </li>
               </ul>
             </div>
@@ -87,7 +88,7 @@ I'm a motivated and detail-oriented Software Developer with strong skills in Pyt
                     Innovation Engineer Trainee at Forge (Jan 2025 - Jul 2025){" "}
                   </h4>
                   <p>
-                    Developed a delta robot prototype, focusing on design, motion testing, accuracy evaluation, and automation integration.
+                    Developed a delta robot prototype, focusing on design, motion testing and automation.
                   </p>
                 </div>
 
@@ -97,7 +98,7 @@ I'm a motivated and detail-oriented Software Developer with strong skills in Pyt
                     Intern at Samsung PRISM (Feb 2025 - Sep 2025){" "}
                   </h4>
                   <p>
-                    Optimized Whisper prompts for NER using LLMs, improving speech-to-entity extraction accuracy and overall model performance.
+                    Mentored by professionals on real-world projects at Samsung PRISM.
                   </p>
                 </div>
               </div>

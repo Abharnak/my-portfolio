@@ -25,10 +25,10 @@ export const Projects = () => {
             >
               <h3 className="text-xl font-bold mb-2">LLM-based Prompt Optimization for Speech-based Named Entity Recognition(Samsung PRISM)</h3>
               <p className="text-gray-400 mb-4">
-                Developed a backend pipeline to optimize Whisper ASR prompts using LLMs for improved speech-based NER. Evaluated 10 prompt styles, integrating DistilBERT for entity extraction, Phi for prompt generation, and WER for evaluation, achieving over 2% reduction in error rate.
+                Developed a backend pipeline to optimize Whisper ASR prompts using LLMs for improved speech-based NER. Evaluated 10 different prompt styles, integrating DistilBERT for entity extraction, Phi for prompt generation, and WER for evaluation, achieving over 2% reduction in error rate.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
-                {["Python", "Whisper", "Phi LLM", "DistilBERT","HuggingFace"].map(
+                {["Python", "Whisper", "Phi LLM", "DistilBERT", "HuggingFace"].map(
                   (tech) => (
                     <span
                       key={tech}
@@ -68,7 +68,7 @@ export const Projects = () => {
                 Built a deep learning model to classify bleeding and non-bleeding frames from a wireless capsule endoscopy dataset. Modified a pre-trained MobileNetV2 architecture for binary classification, achieving 97% accuracy. Applied transfer learning, image preprocessing, and regularization techniques to enhance model performance and generalization. 
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
-                {["Python", "Tensorflow", "MobileNetV2", "Deep Learning"].map((tech, key) => (
+                {["Python", "Tensorflow", "MobileNetV2","Transfer Learning", "Deep Learning"].map((tech, key) => (
                   <span
                     key={key}
                     className="
@@ -103,7 +103,7 @@ export const Projects = () => {
               Video-to-Text Transcriber that automates audio extraction from videos using MoviePy and Pydub, and converts speech to text with OpenAI Whisper for accurate transcription, even in diverse acoustic environments.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
-                {["OpenAI", "Whisper"].map((tech, key) => (
+                {["OpenAI", "Whisper","HTML","CSS"].map((tech, key) => (
                   <span
                     key={key}
                     className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
