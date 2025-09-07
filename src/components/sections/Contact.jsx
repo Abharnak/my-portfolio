@@ -127,7 +127,7 @@ const [status,setStatus]=useState("");
             </a>
             <a
               href="my-portfolio/resume.pdf"
-              download="resume.pdf"
+              download="abharna-resume.pdf"
               className="flex items-center space-x-2 bg-green-600 text-white py-3 px-6 rounded font-medium transition hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(34,197,94,0.4)] w-full md:w-auto text-center"
             >
             <FaDownload size={20} />
