@@ -69,7 +69,7 @@ export const Coding = () => {
             <div className="glass p-6 rounded-xl border border-white/10 
               hover:-translate-y-1 hover:border-blue-500/30
               hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)]
-              transition-all text-center min-h-[200px]">
+              transition-all text-center min-h-[2c00px]">
               <h3 className="text-xl font-bold mb-4"> 📊 LeetCode Stats </h3>
               <img
                 src={`https://leetcard.jacoblin.cool/AbharnaK?theme=dark`}
