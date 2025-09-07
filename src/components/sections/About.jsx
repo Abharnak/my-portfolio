@@ -5,14 +5,15 @@ export const About = () => {
     "Python",
     "SQL",
     "C++",
+    "Git",
     "HTML",
     "Machine Learning",
     "Data Visualization",
     
   ];
 
-  const backendSkills = ["Powerbi", "Excel", "Git", "Whisper", "Google colab",
-                        "Figma", "Kicad", "Fusion360", "Arduino","TinkerCAD"];
+  const backendSkills = ["Powerbi", "Excel", "Whisper", "Google colab",
+                        "Figma", "Canva","Kicad", "Fusion360", "Arduino","TinkerCAD"];
 
   return (
     <section
@@ -75,7 +76,8 @@ I'm a motivated and detail-oriented Software Developer with strong skills in Pyt
                   (2022-2024)
                 </li>
                 <li>
-                  <strong>Relevant Coursework:</strong> Data Structures, Operating System, Data Modelling, Machine Learning, Data Visualization, Computer Vision & Image Processing
+                  <strong>Relevant Coursework:       </strong> 
+                       <p>Data Structures & Algorithms, Operating System, Data Modelling, Machine Learning, Data Visualization</p>
                 </li>
               </ul>
             </div>
@@ -98,11 +100,30 @@ I'm a motivated and detail-oriented Software Developer with strong skills in Pyt
                     Intern at Samsung PRISM (Feb 2025 - Sep 2025){" "}
                   </h4>
                   <p>
-                    Mentored by professionals on real-world projects at Samsung PRISM.
+                    Mentored by professionals on real-world projects.
                   </p>
                 </div>
               </div>
             </div>
+
+            {/* achievement */}
+              <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
+                <h3 className="text-xl font-bold mb-4"> 🏆 Achievements </h3>
+                <ul className="list-disc list-inside text-gray-300 space-y-2">
+                  <li>Mahatma Gandhi Merit Scholar</li>
+                  <li>Runner-up at Intra-Ideathon</li>
+                  <li>Completed Advance Data Modelling Certification</li>
+                </ul>
+              </div>
+
+              <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
+                <h3 className="text-xl font-bold mb-4"> 🎯 Participation </h3>
+                <ul className="list-disc list-inside text-gray-300 space-y-2">
+                  <li>Participated in TANCAM Hackathon organized by Dassault Systems.</li>
+                  <li>Participated in Hackatra conducted by devpost.</li>
+                </ul>
+              </div>
+
           </div>
         </div>
       </RevealOnScroll>
