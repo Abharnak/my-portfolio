@@ -126,6 +126,13 @@ export const Contact = () => {
             >
               GitHub
             </a>
+              <a
+                href="/22BAD002-Abharna K.pdf"
+                download="Abharna_Resume.pdf"
+                className="bg-green-600 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(34,197,94,0.4)]"
+              >
+                Download Resume
+              </a>
           </div>
         </div>
       </RevealOnScroll>
