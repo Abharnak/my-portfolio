@@ -9,21 +9,36 @@ export const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const [status, setStatus] = useState("");
 
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
-        e.target,
-        import.meta.env.VITE_PUBLIC_KEY
-      )
-      .then((result) => {
-        alert("Message Sent!");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbwtEt3o1jbI12dHgaTDGAgOPoTs4vJplb3LFW1BiSbBjhSLtK0LEB-rEo987kukuCKc/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.status === "success") {
+        setStatus("Message Sent!");
         setFormData({ name: "", email: "", message: "" });
-      })
-      .catch(() => alert("Oops! Something went wrong. Please try again."));
+      } else {
+        throw new Error(data.message || "Unknown server error");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      setStatus("Failed to send message.");
+    }
   };
 
   return (
@@ -34,7 +49,6 @@ export const Contact = () => {
       <RevealOnScroll>
         <div className="px-4 w-full min-w-[300px] md:w-[500px] sm:w-2/3 p-6">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-            {" "}
             Get In Touch
           </h2>
           <form className="space-y-6" onSubmit={handleSubmit}>
@@ -89,7 +103,30 @@ export const Contact = () => {
             >
               Send Message
             </button>
+
+            {status && (
+              <p className="text-center text-sm text-white mt-2">{status}</p>
+            )}
           </form>
+
+          <div className="flex justify-center space-x-4 mt-6">
+            <a
+              href="https://www.linkedin.com/in/abharna-k"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/abharnak"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-800 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
       </RevealOnScroll>
     </section>

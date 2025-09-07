@@ -2,14 +2,16 @@ import { RevealOnScroll } from "../RevealOnScroll";
 
 export const About = () => {
   const frontendSkills = [
-    "React",
-    "Vue",
-    "TypeScript",
-    "TailwindCSS",
-    "Svelte",
+    "Python",
+    "SQL",
+    "C++",
+    "HTML",
+    "Machine Learning",
+    "Data Visualization",
+    
   ];
 
-  const backendSkills = ["Node.js", "Python", "AWS", "MongoDB", "GraphQL"];
+  const backendSkills = ["Powerbi", "Excel", "Google colab","Figma", "Kicad", "Fusion360", "Arduino"];
 
   return (
     <section
@@ -25,13 +27,12 @@ export const About = () => {
 
           <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
             <p className="text-gray-300 mb-6">
-              Passionate developer with expertise in building scalable web
-              applications and creating innovative solutions.
+I'm a motivated and detail-oriented Software Developer with strong skills in Python, C++, and SQL. I enjoy building robust applications, optimizing databases, and creating efficient, scalable solutions. With a passion for software engineering and AI-driven systems, I love solving real-world challenges and contributing to innovative, high-impact projects.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4"> Frontend</h3>
+                <h3 className="text-xl font-bold mb-4"> Skills</h3>
                 <div className="flex flex-wrap gap-2">
                   {frontendSkills.map((tech, key) => (
                     <span
@@ -47,7 +48,7 @@ export const About = () => {
               </div>
 
               <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4"> Backend</h3>
+                <h3 className="text-xl font-bold mb-4"> Tools</h3>
                 <div className="flex flex-wrap gap-2">
                   {backendSkills.map((tech, key) => (
                     <span
@@ -69,12 +70,11 @@ export const About = () => {
               <h3 className="text-xl font-bold mb-4"> 🏫 Education </h3>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
                 <li>
-                  <strong> B.S. in Computer Science </strong> - XYZ University
-                  (2016-2020)
+                  <strong> B.Tech. in Artificial Inelligence and Data SCience </strong> - Kumaraguru College of Technology
+                  (2022-2024)
                 </li>
                 <li>
-                  Relevant Coursework: Data Structures, Web Development, Cloud
-                  Computing...
+                  Relevant Coursework: Data Structures, Machine Learning, Data Visualization
                 </li>
               </ul>
             </div>
@@ -84,22 +84,20 @@ export const About = () => {
                 <div>
                   <h4 className="font-semibold">
                     {" "}
-                    Software Engineer at ABC Corp (2020 - Present){" "}
+                    Innovation Engineer Trainee at Forge (Jan 2025 - Jul 2025){" "}
                   </h4>
                   <p>
-                    Developed and maintained microservices for cloud-based
-                    applications.
+                    Developed a delta robot prototype, focusing on design, motion testing, accuracy evaluation, and automation integration.
                   </p>
                 </div>
 
                 <div>
                   <h4 className="font-semibold">
                     {" "}
-                    Intern at DEF Startups (2019){" "}
+                    Intern at Samsung PRISM (Feb 2025 - Sep 2025){" "}
                   </h4>
                   <p>
-                    Assisted in building front-end components and integration
-                    REST APIs
+                    Optimized Whisper prompts for NER using LLMs, improving speech-to-entity extraction accuracy and overall model performance.
                   </p>
                 </div>
               </div>
