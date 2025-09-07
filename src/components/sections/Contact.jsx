@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
+import { FaLinkedin, FaGithub, FaDownload } from "react-icons/fa";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -109,31 +110,35 @@ export const Contact = () => {
             )}
           </form>
 
-          <div className="flex justify-center space-x-4 mt-6">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-6">
             <a
               href="https://www.linkedin.com/in/abharna-k"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
+              className="flex items-center space-x-2 bg-blue-500 text-white py-3 px-6 rounded font-medium transition hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] w-full md:w-auto text-center"
             >
-              LinkedIn
+              <FaLinkedin size={20} />
+              <span>LinkedIn</span>
             </a>
             <a
               href="https://github.com/abharnak"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-800 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
+              className="flex items-center space-x-2 bg-gray-800 text-white py-3 px-6 rounded font-medium transition hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] w-full md:w-auto text-center"
             >
-              GitHub
+              <FaGithub size={20} />
+              <span>GitHub</span>
             </a>
-              <a
-                href="/22BAD002-Abharna K.pdf"
-                download="Abharna_Resume.pdf"
-                className="bg-green-600 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(34,197,94,0.4)]"
-              >
-                Download Resume
-              </a>
+            <a
+              href="/resume.pdf"
+              download="Abharna_Resume.pdf"
+              className="flex items-center space-x-2 bg-green-600 text-white py-3 px-6 rounded font-medium transition hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(34,197,94,0.4)] w-full md:w-auto text-center"
+            >
+              <FaDownload size={20} />
+              <span>Resume</span>
+            </a>
           </div>
+
         </div>
       </RevealOnScroll>
     </section>
