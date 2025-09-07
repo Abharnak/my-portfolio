@@ -3,43 +3,35 @@ import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
 import { FaLinkedin, FaGithub, FaDownload } from "react-icons/fa";
 
+
 export const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-
-  const [status, setStatus] = useState("");
-
-  const handleSubmit = async (e) => {
+const [status,setStatus]=useState("");
+  const handleSubmit = (e) => {
     e.preventDefault();
     setStatus("Sending...");
-
-    try {
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwtEt3o1jbI12dHgaTDGAgOPoTs4vJplb3LFW1BiSbBjhSLtK0LEB-rEo987kukuCKc/exec",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
-
-      const data = await response.json();
-
-      if (data.status === "success") {
-        setStatus("Message Sent!");
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        e.target,
+        import.meta.env.VITE_PUBLIC_KEY
+      )
+      .then((result) => {
+        setStatus("✅ Message Sent!");
         setFormData({ name: "", email: "", message: "" });
-      } else {
-        throw new Error(data.message || "Unknown server error");
-      }
-    } catch (error) {
-      console.error("Submission error:", error);
-      setStatus("Failed to send message.");
-    }
+
+        // ✅ Clear the success message after 3 seconds
+        setTimeout(() => {
+          setStatus("");
+        }, 3000);
+      })
+       .catch(() => setStatus("❌ Oops! Something went wrong. Please try again."));
+ ;
   };
 
   return (
@@ -50,14 +42,18 @@ export const Contact = () => {
       <RevealOnScroll>
         <div className="px-4 w-full min-w-[300px] md:w-[500px] sm:w-2/3 p-6">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+            {" "}
             Get In Touch
           </h2>
           <form className="space-y-6" onSubmit={handleSubmit}>
+            {/* Hidden input for recipient name */}
+            <input type="hidden" name="to_name" value="Abharna" /> {/* ✅ Added */}
+
             <div className="relative">
               <input
                 type="text"
                 id="name"
-                name="name"
+                name="from_name"
                 required
                 value={formData.name}
                 className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
@@ -130,13 +126,13 @@ export const Contact = () => {
               <span>GitHub</span>
             </a>
             <a
-              href="/resume.pdf"
-              download="Abharna_Resume.pdf"
+              href="my-portfolio/resume.pdf"
+              download="resume.pdf"
               className="flex items-center space-x-2 bg-green-600 text-white py-3 px-6 rounded font-medium transition hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(34,197,94,0.4)] w-full md:w-auto text-center"
             >
-              <FaDownload size={20} />
-              <span>Resume</span>
-            </a>
+            <FaDownload size={20} />
+            <span>Resume</span>
+          </a>
           </div>
 
         </div>
