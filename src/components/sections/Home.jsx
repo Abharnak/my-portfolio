@@ -13,7 +13,7 @@ export const Home = () => {
           </h1>
 
           <p className="tex-gray-400 text-lg mb-8 max-w-lg mx-auto">
-          Software Developer skilled in Python, C++, and SQL, passionate about building scalable solutions and AI-driven systems to solve real-world challenges.
+          Data Analyst skilled in Python, SQL and PowerBi passionate about building scalable solutions and AI-driven systems to solve real-world challenges.
           </p>
           <div className="flex justify-center space-x-4">
             <a

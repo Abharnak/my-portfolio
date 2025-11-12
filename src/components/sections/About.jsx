@@ -4,6 +4,7 @@ export const About = () => {
   const frontendSkills = [
     "Python",
     "SQL",
+    "MongoDB",
     "C++",
     "Git",
     "HTML",
@@ -13,7 +14,7 @@ export const About = () => {
   ];
 
   const backendSkills = ["Powerbi", "Excel", "Whisper", "Google colab",
-                        "Figma", "Canva","Kicad", "Fusion360", "Arduino","TinkerCAD"];
+                        "Figma", "Canva","Kicad", "Fusion360"];
 
   return (
     <section
@@ -29,7 +30,7 @@ export const About = () => {
 
           <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
             <p className="text-gray-300 mb-6">
-I'm a motivated and detail-oriented Software Developer with strong skills in Python, C++, and SQL. I enjoy building robust applications, optimizing databases, and creating efficient, scalable solutions. With a passion for software engineering and AI-driven systems, I love solving real-world challenges and contributing to innovative, high-impact projects.
+I'm a motivated and detail-oriented Data Analyst skilled in Python, C++, SQL, and Power BI. I specialize in building insightful dashboards, optimizing data workflows, and developing scalable analytical solutions. With a strong interest in AI-driven systems and software engineering, I'm passionate about transforming data into actionable insights and contributing to innovative, real-world projects that drive impact.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -84,15 +85,6 @@ I'm a motivated and detail-oriented Software Developer with strong skills in Pyt
             <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
               <h3 className="text-xl font-bold mb-4"> 💼 Work Experience </h3>
               <div className="space-y-4 text-gray-300">
-                <div>
-                  <h4 className="font-semibold">
-                    {" "}
-                    Innovation Engineer Trainee at Forge (Jan 2025 - Jul 2025){" "}
-                  </h4>
-                  <p>
-                    Developed a delta robot prototype, focusing on design, motion testing and automation.
-                  </p>
-                </div>
 
                 <div>
                   <h4 className="font-semibold">
@@ -101,6 +93,16 @@ I'm a motivated and detail-oriented Software Developer with strong skills in Pyt
                   </h4>
                   <p>
                     Mentored by professionals on real-world projects.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold">
+                    {" "}
+                    Innovation Engineer Trainee at Forge (Jan 2025 - Jul 2025){" "}
+                  </h4>
+                  <p>
+                    Developed a delta robot prototype, focusing on design, motion testing and automation.
                   </p>
                 </div>
               </div>
