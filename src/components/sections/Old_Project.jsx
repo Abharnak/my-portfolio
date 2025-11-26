@@ -1,6 +1,6 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 
-export const Projects = () => {
+export const Projects_old = () => {
   return (
     <section
       id="projects"
